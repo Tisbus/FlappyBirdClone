@@ -53,19 +53,21 @@ public class FlappyBird extends ApplicationAdapter {
         background2 = new Texture("background2.png");
         background3 = new Texture("background3.png");
         background4 = new Texture("background4.png");
-        background5 = new Texture("background5.png");
-        background6 = new Texture("background6.png");
         dragon = new Texture[4];
         dragon[0] = new Texture("dragon_wings_up.png");
         dragon[1] = new Texture("dragon_wings_down.png");
         dragon[2] = new Texture("dragon_wings_dead.png");
         dragon[3] = new Texture("dragon_wings_dead_tube.png");
-        tubeTop = new Texture[2];
-        tubeDown = new Texture[2];
+        tubeTop = new Texture[4];
+        tubeDown = new Texture[4];
         tubeTop[0] = new Texture("top_tube.png");
         tubeDown[0] = new Texture("bottom_tube.png");
         tubeTop[1] = new Texture("top_tube2.png");
         tubeDown[1] = new Texture("bottom_tube2.png");
+        tubeDown[2] = new Texture("bottom_tube3.png");
+        tubeTop[2] = new Texture("top_tube3.png");
+        tubeDown[3] = new Texture("bottom_tube3.png");
+        tubeTop[3] = new Texture("top_tube3.png");
         gameOver = new Texture("game_over.png");
         shapeRenderer = new ShapeRenderer();
         birdCircle = new Circle();
@@ -103,15 +105,9 @@ public class FlappyBird extends ApplicationAdapter {
         } else if (gameScore < 4) {
             batch.draw(background3, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
             isBackground = 2;
-        } else if (gameScore < 5) {
+        } else{
             batch.draw(background4, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
             isBackground = 3;
-        } else if (gameScore < 6) {
-            batch.draw(background5, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-            isBackground = 4;
-        } else {
-            batch.draw(background6, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-            isBackground = 5;
         }
         if (isTouch == 1) {
 
